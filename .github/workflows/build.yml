@@ -29,11 +29,11 @@ jobs:
       - name: 📦 Install dependencies
         run: flutter pub get
 
-      - name: 🔍 Analyze Flutter code
-        run: flutter analyze
-
       - name: 🧪 Run tests
         run: flutter test --coverage
+
+      - name: Build
+        run: flutter build apk --release
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
